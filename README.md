@@ -229,4 +229,4 @@ If you `search_by="edition"`, these will be the `name` values for each one you n
 
 ## Known issues
 + Can't parse correctly flavor texts if they contain html tags.
-+ Can't parse correctly mana costs because they are <img> tags and there isn't currently an string representation of them.
++ Can't parse correctly mana costs because they are `<img>` tags and there isn't currently an string representation of them.
