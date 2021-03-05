@@ -1,13 +1,30 @@
 # ck-spider
+
+- [Description](#description)
+- [Parameters](#parameters)
+- [Examples](#examples)
+  - [Search by edition](#searching-by-edition)
+  - [Search by cardname](#search-by-cardname)
+- [Edition names list](#edition-name-list)
+- [Known issues](#known-issues)
+
+## Description
 A simple cardkingdom spider.
 
-To run spider you need to append 2 arguments:
-+ `search_by`, which currently works with only 2 values: **edition** and **cardname**.
-+ `name`, the name which you are looking for.
+## Parameters
++ `search_by`: currently works with only 2 values: **edition** and **cardname**.
++ `name`: the name which you are looking for.
 
 > You can pass incomplete `name` values if you are searching by **cardname**.
 
-If you `search_by="edition"`, these will be the `name` values for each one you need to crawl:
+## Examples 
+### Searching by edition
+```scrapy runspider mtgcards.py -a search_by=edition -a name=alpha -o edition.json```
+
+### Search by cardname
+```scrapy runspider mtgcards.py -a search_by=cardname -a name=black -o cardname.json```
+
+## Edition name list
 
 | Edition | Name |
 |---------|------|
@@ -230,3 +247,5 @@ If you `search_by="edition"`, these will be the `name` values for each one you n
 ## Known issues
 + Can't parse correctly flavor texts if they contain html tags.
 + Can't parse correctly mana costs because they are `<img>` tags and there isn't currently an string representation of them.
+
+[#top](#ck-spider)
