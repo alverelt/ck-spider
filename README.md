@@ -18,7 +18,7 @@ A simple cardkingdom spider.
 > You can pass incomplete `name` values if you are searching by **cardname**.
 
 ## Examples 
-### Searching by edition
+### Search by edition
 ```scrapy runspider mtgcards.py -a search_by=edition -a name=alpha -o edition.json```
 
 ### Search by cardname
